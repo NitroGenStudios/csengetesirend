@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="data.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<body class="w-screen h-screen flex flex-col items-center justify-center bg-slate-800 text-slate-200">
+
+		<form class="w-[100%] sm:w-[80%] md:w-[70%] lg:w-[60%] bg-slate-900 p-3 pb-0 rounded-[16px] overflow-clip shadow-2xl">
+			<fieldset id="questions" class="w-[100%] h-[100%] flex flex-col items-center">
+	
+				<div class="w-[100%] flex flex-row justify-evenly">
+					<div class="m-3">
+						<input type="radio" name="choice" id="c1" value="h45" onclick="refresh()">
+						<label for="q1">Normál (45 perc)</label>
+					</div>
+		
+					<div class="m-3">
+						<input type="radio" name="choice" id="c2" value="h40" onclick="refresh()">
+						<label for="q2">Rövidített (40 perc)</label>
+					</div>
+		
+					<div class="m-3">
+						<input type="radio" name="choice" id="c3" value="h35" onclick="refresh()">
+						<label for="q3">Rövidítettebb (35 perc)</label>
+					</div>
+				</div>
+
+				<div class="w-[100%] mt-5">
+					<legend id="time" class="text-[48px] glow font-bold text-center">12:00</legend>
+				</div>
+
+				<div class="w-[100%] text-center m-5">
+					<p id="desc_text">Szünet van. A 6. óra következik: 16:00-tól.</p>
+				</div>
+	
+				<div onclick="refresh()" class="w-[200%] h-[100%] p-5 bg-purple-500 text-white flex flex-col items-center justify-center">
+					<input type="button" value="Refresh">
+				</div>
+			</fieldset>
+
+	<script src="js.js"></script>
+
+</body>
+</html>
